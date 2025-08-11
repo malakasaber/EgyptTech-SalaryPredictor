@@ -115,12 +115,12 @@ Experience the salary predictor:
 ### Complete Documentation
 Detailed project documentation including methodology, findings, and technical specifications:
 
-📄 **[Complete Project Documentation](./mywork/documentation/Complete Project Documentation.pdf)**
+📄 **[Complete Project Documentation](./mywork/documentation/Complete%20Project%20Documentation.pdf)**
 
 ### Jupyter Notebooks
 Explore the analysis and modeling process:
 - **[Data Exploration & Cleaning](./mywork/notebooks/EgyptianTechCleaning.ipynb)**
-- **[Model Development](./mywork/notebooks/CleanedEgyptSalaries Modelling.ipynb)**
+- **[Model Development](./mywork/notebooks/CleanedEgyptSalaries%20Modelling.ipynb)**
 
 ## 🔧 Installation & Setup
 
