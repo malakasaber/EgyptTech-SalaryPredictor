@@ -57,7 +57,7 @@ The planning covered:
 3. **Feature Engineering**: Job title categorization, currency normalization, date parsing
 4. **Preprocessing**: Encoding, scaling, and feature selection
 
-## 🎨 Interactive Dashboard
+## 🎨 Interactive Multi Page Dashboard
 
 Explore the data through our comprehensive dashboard:
 
@@ -95,7 +95,7 @@ Features Used:
 ### Live Application
 Experience the salary predictor:
 
-🔗 **[Salary Predictor Web App](NoneInProduction)**
+🔗 **[NoneInProduction](NoneInProduction)**
 
 ### Key Features:
 - **Modern UI/UX**: Glassmorphism design with smooth animations
@@ -115,12 +115,12 @@ Experience the salary predictor:
 ### Complete Documentation
 Detailed project documentation including methodology, findings, and technical specifications:
 
-📄 **[Complete Project Documentation](./mywork/documentation/Complete_Project_Documentation.pdf)**
+📄 **[Complete Project Documentation](./mywork/documentation/Complete Project Documentation.pdf)**
 
 ### Jupyter Notebooks
 Explore the analysis and modeling process:
-- **[Data Exploration & Cleaning](./mywork/notebooks/01_data_exploration.ipynb)**
-- **[Model Development](./mywork/notebooks/03_model_training.ipynb)**
+- **[Data Exploration & Cleaning](./mywork/notebooks/EgyptianTechCleaning.ipynb)**
+- **[Model Development](./mywork/notebooks/CleanedEgyptSalaries Modelling.ipynb)**
 
 ## 🔧 Installation & Setup
 
