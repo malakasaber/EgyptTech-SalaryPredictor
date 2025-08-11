@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Prediction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💰 Salary Predictor</h1>
+            <p class="subtitle">Get accurate salary predictions based on your profile</p>
+        </div>
+
+        <div class="form-container">
+            <form method="post" class="form-grid">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label>💼 Job Title</label>
+                    <input type="text" name="title" placeholder="e.g. Software Engineer" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>📊 Years of Experience</label>
+                    <input type="number" step="0.1" name="years" placeholder="e.g. 2.5" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>📅 Salary Date</label>
+                    <input type="date" name="salaryDate" required pattern="\d{4}-\d{2}-\d{2}">
+                </div>
+                
+                <div class="form-group">
+                    <label>🏢 Company Country</label>
+                    <select name="companyCountry" required>
+                        <option value="">Select Company Type</option>
+                        <option>Egyption and site in egypt</option>
+                        <option>Not Egyption but site in egypt</option>
+                        <option>Else</option>
+                        <option>Not Egyption and site out of egypt</option>
+                        <option>Egyptian and site out of Egypt</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🏠 Work Type</label>
+                    <select name="worktype" required>
+                        <option value="">Select Work Type</option>
+                        <option>Remote</option>
+                        <option>On Site</option>
+                        <option>Hybrid</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>⏰ Work Hours</label>
+                    <select name="workhour" required>
+                        <option value="">Select Work Hours</option>
+                        <option>Full Time</option>
+                        <option>Part Time</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🌍 City</label>
+                    <select name="city" required>
+                        <option value="">Select City</option>
+                        <option>Cairo</option>
+                        <option>Multi Site</option>
+                        <option>Dubai</option>
+                        <option>Australia</option>
+                        <option>Alexandria</option>
+                        <option>Kuwait</option>
+                        <option>Riyadh</option>
+                        <option>London</option>
+                        <option>Giza</option>
+                        <option>Jordan</option>
+                        <option>California</option>
+                        <option>Mansoura</option>
+                        <option>Manama</option>
+                        <option>Canada</option>
+                        <option>Beni Suef</option>
+                        <option>Berlin</option>
+                        <option>Lebnanon</option>
+                        <option>Minya</option>
+                        <option>Tanta</option>
+                        <option>Else</option>
+                        <option>6th of October</option>
+                        <option>Shiekh zayed</option>
+                        <option>USA</option>
+                        <option>Jeddah</option>
+                        <option>Georgia</option>
+                        <option>Suez</option>
+                        <option>Poland</option>
+                        <option>Abu Dhabi</option>
+                        <option>Marsa Alam</option>
+                        <option>New York</option>
+                        <option>Amman</option>
+                        <option>Obour City</option>
+                        <option>New Administrative capital</option>
+                        <option>France</option>
+                        <option>Zagazig</option>
+                        <option>Vancouver</option>
+                        <option>Nasr City</option>
+                        <option>Warsaw</option>
+                        <option>Munich</option>
+                        <option>Oman</option>
+                        <option>10th of Ramadan</option>
+                        <option>Denmark</option>
+                        <option>Montreal</option>
+                        <option>Kuwait</option>
+                        <option>rabat</option>
+                        <option>Zurich</option>
+                        <option>Shorouk</option>
+                        <option>Baghdad</option>
+                        <option>Magdeburg</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>💵 Currency</label>
+                    <select name="currency" required>
+                        <option value="">Select Currency</option>
+                        <option>EGP</option>
+                        <option>USD</option>
+                        <option>AED</option>
+                        <option>SAR</option>
+                        <option>EUR</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    🔮 Predict My Salary
+                </button>
+            </form>
+
+            {% if prediction %}
+                <div class="modal-overlay active" id="predictionModal">
+                    <div class="prediction-popup">
+                        <div class="popup-icon">🎉</div>
+                        <h2 class="popup-title">Salary Prediction Complete!</h2>
+                        <p class="popup-subtitle">Based on your profile, here's your Expected salary:</p>
+                        
+                        <div class="predicted-amount">{{ prediction }}</div>
+                        
+                        <div class="popup-details">
+                            <div class="detail-item">
+                                <span>📊 Confidence Level:</span>
+                                <span>High</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>📅 Based on Date:</span>
+                                <span>Current Market</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>🎯 Accuracy:</span>
+                                <span>±15%</span>
+                            </div>
+                        </div>
+
+                        <button class="close-popup-btn" onclick="closeModal()">
+                            ✨ Got it, Thanks!
+                        </button>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="{% static 'js/form.js' %}"></script>
+</body>
+</html>
